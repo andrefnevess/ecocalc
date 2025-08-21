@@ -1,0 +1,103 @@
+:root {
+  --verde-escuro: #014626;
+  --verde-claro: #00aa55;
+  --verde-gradiente: linear-gradient(135deg, #014626, #00aa55);
+
+  --texto-claro: #f0fdf4;
+  --texto-secundario: #a7f3d0;
+
+  --cor-destaque: #55DE16;
+  --cor-fundo-escuro: #014626;
+  --cor-texto-escuro: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--verde-gradiente);
+  background-color: url('calculadora_fundo.svg');
+}
+
+.calculadora {
+  background: var(--cor-fundo-escuro);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 320px;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: var(--texto-claro);
+  margin-bottom: 15px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  align-items: center;
+}
+
+
+#display {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background: var(--verde-escuro);
+  color: var(--texto-claro);
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px;
+  outline: none;
+}
+
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 60px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--verde-claro);
+  color: var(--cor-texto-escuro);
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--cor-destaque);
+  color: var(--verde-escuro);
+}
+
+.igual {
+  grid-row: span 2;
+  background: var(--cor-destaque);
+  color: var(--verde-escuro);
+  font-size: 1.6rem;
+}
+
+.igual:hover {
+  background: var(--texto-claro);
+}
+
+.zero {
+  grid-column: span 2;
+}

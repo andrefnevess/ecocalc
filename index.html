@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Verde</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container">
+    <h1>EcoCalc 🌱</h1>
+    <div class="calculadora">
+      <input type="text" id="display" readonly />
+      <div class="botoes">
+        <button onclick="limpar()">C</button>
+        <button onclick="apagar()">DEL</button>
+        <button onclick="inserir('/')">÷</button>
+        <button onclick="inserir('*')">×</button>
+
+        <button onclick="inserir('7')">7</button>
+        <button onclick="inserir('8')">8</button>
+        <button onclick="inserir('9')">9</button>
+        <button onclick="inserir('-')">−</button>
+
+        <button onclick="inserir('4')">4</button>
+        <button onclick="inserir('5')">5</button>
+        <button onclick="inserir('6')">6</button>
+        <button onclick="inserir('+')">+</button>
+
+        <button onclick="inserir('1')">1</button>
+        <button onclick="inserir('2')">2</button>
+        <button onclick="inserir('3')">3</button>
+        <button onclick="calcular()" class="igual">=</button>
+
+        <button onclick="inserir('0')" class="zero">0</button>
+        <button onclick="inserir('.')">.</button>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
