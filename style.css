@@ -19,12 +19,11 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--verde-gradiente);
-  background-color: url('calculadora_fundo.svg');
 }
 
 .calculadora {
@@ -33,6 +32,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   width: 320px;
+  max-width: 90%;
 }
 
 .container {
@@ -42,13 +42,10 @@ body {
 h1 {
   color: var(--texto-claro);
   margin-bottom: 15px;
-  font-size: 2rem;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   font-family: 'Poppins', sans-serif;
   font-size: 50px;
-  align-items: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
-
 
 #display {
   width: 100%;
@@ -100,4 +97,40 @@ button:hover {
 
 .zero {
   grid-column: span 2;
+}
+
+/* ================== RESPONSIVIDADE ================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+  #display {
+    height: 50px;
+    font-size: 1.8rem;
+  }
+  button {
+    height: 50px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+  #display {
+    height: 45px;
+    font-size: 1.5rem;
+  }
+  button {
+    height: 45px;
+    font-size: 1rem;
+  }
+  .calculadora {
+    padding: 15px;
+    width: 90%;
+  }
 }
